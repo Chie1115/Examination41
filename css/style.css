@@ -1,250 +1,252 @@
 html {
-  font-size: 100%;
+    font-size: 100%;
 }
+
 /*
-フッターを画面下に配置するために、
-「position: relative;」を設定
-「min-height」で最小の高さを画面の高さにあわせる
+Set 'position: relative;' for the body to allow the footer to be positioned at the bottom of the viewport.
+'min-height: 100vh;' ensures the body takes at least the full height of the viewport.
 */
 body {
-  color: #333;
-  font-size: 0.9rem;
-  min-height: 100vh;
-  position: relative;
+    color: #333;
+    font-size: 1rem;
+    min-height: 100vh; /* Minimum height set to viewport height */
+    position: relative; /* Relative positioning for footer alignment */
 }
+
 a {
-  color: #333;
-  text-decoration: none;
-  transition: all 0.5s;
+    color: #333; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    transition: all 0.5s; /* Smooth transition for hover effects */
 }
+
 a:hover {
-  opacity: 0.7;
+    opacity: 0.7; /* Slightly fade links on hover */
 }
+
 img {
-  max-width: 100%;
+    max-width: 100%; /* Responsive image scaling */
 }
+
 li {
-  list-style: none;
+    list-style: none; /* Remove bullet points from lists */
 }
+
 /*
-コンテンツ幅を設定するための共通クラス
+Wrapper class for setting a maximum content width and centering content.
 */
 .wrapper {
-  width: 100%;
-  max-width: 1360px;
-  margin: 0 auto;
-  padding: 0 40px;
+    width: 100%; /* Full width */
+    max-width: 1360px; /* Limit maximum width */
+    margin: 0 auto; /* Centering */
+    padding: 0 40px; /* Side padding */
 }
+
 .content {
-  padding-top: 120px;
-  padding-bottom: 160px;
+    padding-top: 120px; /* Top padding */
+    padding-bottom: 160px; /* Bottom padding */
 }
+
 .site-title a {
-  width: 180px;
-  line-height: 1px;
-  display: block;
+    width: 180px; /* Fixed width for site title */
+    line-height: 1px; /* Remove line height for centered text */
+    display: block; /* Block display for links */
 }
+
 .page-title {
-  font-size: 0.9rem;
-  font-weight: normal;
-  margin-bottom: 30px;
+    font-size: 0.9rem; /* Smaller font size for page titles */
+    font-weight: normal; /* Normal font weight */
+    margin-bottom: 30px; /* Space below page title */
 }
 
 /*-------------------------------------------
-ヘッダー
+Header
 -------------------------------------------*/
 #header {
-    width: 100%;
-    max-width: 1360px; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 270px;
-    margin: 0 auto;
-    padding: 0 40px; /* padding を調整 */
-  }
-  #header ul {
-    display: flex;
-    padding: 10px 0;
-  }
-  #header li {
-    font-size: 0.9rem;
-    margin-left: 30px;
-  }
-  #header li a {
-    color: #24292e;
-  }
-  #header li a:hover {
-    opacity: 0.7;
-  }
-  nav ul {
-    display: flex;
-    justify-content: space-around; /* ナビゲーションメニューを横に並べる */
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    width: 100%; /* Full width */
+    max-width: clamp(800px, 80vw, 1360px); /* Responsive max width */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    height: clamp(200px, 20vh, 270px); /* Responsive height for header */
+    margin: 0 auto; /* Centering */
+    padding: 0 40px; /* Side padding */
 }
 
-
-nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+#header ul {
+    display: flex; /* Flexbox for header navigation */
+    padding: 10px 0; /* Top and bottom padding */
 }
+
+#header li {
+    font-size: 1rem; /* Font size for navigation items */
+    margin-left: 30px; /* Space between items */
+}
+
+#header li a {
+    color: #24292e; /* Link color in the header */
+    transition: color 0.3s, opacity 0.3s; /* Smooth transition for link effects */
+}
+
+#header li a:hover {
+    opacity: 0.7; /* Fade effect on hover */
+}
+
+nav ul {
+    display: flex; /* Flexbox layout for navigation */
+    justify-content: space-around; /* Space items evenly */
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
+}
+
 /*-------------------------------------------
-TOP、PRODUCTS
+Top, Products
 -------------------------------------------*/
 #top {
-  padding-top: 80px;
-  padding-bottom: 160px;
+    padding-top: 80px; /* Top padding for the top section */
+    padding-bottom: 160px; /* Bottom padding for the top section */
 }
+
 .product-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 35px;
+    display: grid; /* Grid layout for products */
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: clamp(20px, 2vw, 35px); /* Responsive gap size */
 }
+
 /*
-vertical-align: top;
-画像の下にできる隙間を消す
+Vertical align images to the top and remove gaps below images.
 */
 .product-list img {
-  margin-bottom: 10px;
-  vertical-align: top;
+    width: clamp(150px, 25vw, 300px); /* Responsive image size */
 }
+
 .product-list p {
-  font-size: 0.75rem;
+    font-size: 0.9rem; /* Font size for product descriptions */
 }
+
 .link-text {
-  display: block;
-  margin-top: 40px;
-  text-align: center;
+    display: block; /* Block display for link text */
+    margin-top: 40px; /* Space above link text */
+    text-align: center; /* Center text */
 }
+
 .pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
+    display: flex; /* Flexbox layout for pagination */
+    justify-content: center; /* Center pagination items */
+    margin-top: 40px; /* Space above pagination */
 }
+
 .pagination li {
-  padding: 0 20px;
+    padding: 0 20px; /* Horizontal padding for pagination items */
 }
 
 /*-------------------------------------------
-ITEM
--------------------------------------------*/
-#item {
-  max-width: 800px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 60px;
-}
-#item .item-text {
-  width: 42%;
-}
-/*
-text-align: justify;
-テキストの両端を揃える
-*/
-#item .item-text p {
-  margin-bottom: 30px;
-  text-align: justify;
-}
-#item .item-text dl {
-  display: flex;
-  flex-wrap: wrap;
-}
-#item .item-text dt {
-  width: 30%;
-}
-#item .item-text dd {
-  width: 70%;
-}
-#item .item-img {
-  width: 50%;
-}
-
-/*-------------------------------------------
-ABOUT
+About
 -------------------------------------------*/
 #about {
-  max-width: 600px;
-}
-#about p {
-  line-height: 1.9;
-  margin-bottom: 30px;
+    max-width: 600px; /* Maximum width for the about section */
 }
 
+#about p {
+    line-height: 1.9; /* Line height for readability */
+    margin-bottom: 30px; /* Space below paragraphs */
+}
 
 /*-------------------------------------------
-フッター
+Footer
 -------------------------------------------*/
 /*
-「position: absolute;」を設定して、フッター位置を画面下に設定
-「left: 0;」「right: 0;」で中央に配置
+Set 'position: absolute;' for the footer to stick at the bottom of the viewport.
+Use 'left: 0;' and 'right: 0;' to center it.
 */
 #footer {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
+    display: flex; /* Flexbox layout for footer */
+    justify-content: space-between; /* Space between footer items */
+    align-items: center; /* Center items vertically */
+    position: relative; /* Relative positioning */
+    margin-top: auto; /* Push footer to the bottom */
+    padding: clamp(10px, 2vw, 30px); /* Responsive padding */
 }
+
 #footer .menu {
-  display: flex;
+    display: flex; /* Flexbox for footer menu */
 }
+
 #footer .menu li {
-  font-size: 0.9rem;
-  margin-right: 30px;
+    font-size: 0.9rem; /* Font size for footer menu items */
+    margin-right: 30px; /* Space between menu items */
 }
+
 #footer .copyright {
-  font-size: 0.9rem;
+    font-size: 0.9rem; /* Font size for copyright notice */
 }
 
 /*-------------------------------------------
-SP
+SP (Smartphone)
 -------------------------------------------*/
 @media screen and (max-width: 900px) {
     #header {
-        padding: 0 20px; /* モバイル画面用に padding を減らす */
-      }
-  /*-------------------------------------------
-  TOP、PRODUCTS
-  -------------------------------------------*/
-  .product-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 20px;
-  }
+        padding: 0 20px; /* Reduce padding for mobile screens */
+    }
 
-  /*-------------------------------------------
-  ITEM
-  -------------------------------------------*/
-  #item {
-    flex-direction: column;
-  }
-  #item .item-text {
-    width: 100%;
-  }
-  #item .item-img {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-}
-
-  @media (max-width: 768px) {
-    #header {
-        flex-direction: column; /* 縦に並べる */
-        align-items: center;
-        padding: 0 20px; /* padding をさらに減らす */
-      }
-    
     /*-------------------------------------------
-  フッター
-  -------------------------------------------*/
-  #footer {
-    flex-direction: column;
-  }
-  #footer .menu {
-    margin-bottom: 5px;
-  }
+    Top, Products
+    -------------------------------------------*/
+    .product-list {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on mobile */
+        gap: 40px 20px; /* Responsive gap size for mobile */
+    }
+
+    /*-------------------------------------------
+    Item
+    -------------------------------------------*/
+    #item {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    #item .item-text {
+        width: 100%; /* Full width for item text */
+    }
+
+    #item .item-img {
+        width: 100%; /* Full width for item images */
+        margin-bottom: 30px; /* Space below images */
+    }
 }
-  
+
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column; /* Stack header items vertically */
+        padding: 20px; /* Adjust padding */
+    }
+
+    #header ul {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    #header li {
+        margin: 10px 0; /* Space between navigation items */
+    }
+
+    /*-------------------------------------------
+    Footer
+    -------------------------------------------*/
+    #footer {
+        flex-direction: column; /* Stack footer items vertically */
+        align-items: center; /* Center footer items */
+        margin-top: 20px; /* Space above footer */
+    }
+
+    #footer .menu {
+        margin-bottom: 10px; /* Space below footer menu */
+        display: flex; /* Flexbox for footer menu */
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center; /* Center footer menu items */
+        padding: 0; /* Reset padding */
+    }
+
+    #footer .menu li {
+        margin-bottom: 5px; /* Space between footer menu items */
+    }
+}
+
