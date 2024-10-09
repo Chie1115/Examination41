@@ -206,7 +206,6 @@ Footer
     -------------------------------------------*/
     #header {
         flex-direction: column; /* Stack header items vertically */
-        padding: 20px; /* Adjust padding */
     }
 
     #header ul {

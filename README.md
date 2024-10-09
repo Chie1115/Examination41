@@ -7,4 +7,4 @@ Anta att ett företag som planerar och säljer möbler och inredning ber oss att
 
 
 =======
->>>>>>> e80a3d6e6e6b33bfd033618aa16235f07d259a89
+>>>>>>> e80a3d6e6e6b33bfd033618aa16235f07d25
