@@ -130,15 +130,6 @@ Vertical align images to the top and remove gaps below images.
     text-align: center; /* Center text */
 }
 
-.pagination {
-    display: flex; /* Flexbox layout for pagination */
-    justify-content: center; /* Center pagination items */
-    margin-top: 40px; /* Space above pagination */
-}
-
-.pagination li {
-    padding: 0 20px; /* Horizontal padding for pagination items */
-}
 
 /*-------------------------------------------
 About
@@ -148,17 +139,14 @@ About
 }
 
 #about p {
-    line-height: 1.9; /* Line height for readability */
-    margin-bottom: 30px; /* Space below paragraphs */
+    line-height: 2; /* Line height for readability */
+    margin-bottom: 10px; /* Space below paragraphs */
 }
 
 /*-------------------------------------------
 Footer
 -------------------------------------------*/
-/*
-Set 'position: absolute;' for the footer to stick at the bottom of the viewport.
-Use 'left: 0;' and 'right: 0;' to center it.
-*/
+
 #footer {
     display: flex; /* Flexbox layout for footer */
     justify-content: space-between; /* Space between footer items */
@@ -173,18 +161,16 @@ Use 'left: 0;' and 'right: 0;' to center it.
 }
 
 #footer .menu li {
-    font-size: 0.9rem; /* Font size for footer menu items */
+    font-size: 1rem; /* Font size for footer menu items */
     margin-right: 30px; /* Space between menu items */
 }
 
 #footer .copyright {
-    font-size: 0.9rem; /* Font size for copyright notice */
+    font-size: 1rem; /* Font size for copyright notice */
 }
 
-/*-------------------------------------------
-SP (Smartphone)
--------------------------------------------*/
-@media screen and (max-width: 900px) {
+
+@media screen and (max-width: 1024px) {
     #header {
         padding: 0 20px; /* Reduce padding for mobile screens */
     }
@@ -215,6 +201,9 @@ SP (Smartphone)
 }
 
 @media (max-width: 768px) {
+     /*-------------------------------------------
+    header
+    -------------------------------------------*/
     #header {
         flex-direction: column; /* Stack header items vertically */
         padding: 20px; /* Adjust padding */
@@ -227,6 +216,7 @@ SP (Smartphone)
     #header li {
         margin: 10px 0; /* Space between navigation items */
     }
+
 
     /*-------------------------------------------
     Footer
@@ -246,7 +236,7 @@ SP (Smartphone)
     }
 
     #footer .menu li {
-        margin-bottom: 5px; /* Space between footer menu items */
+        margin-bottom: 10px; /* Space between footer menu items */
     }
 }
 
