@@ -11,6 +11,7 @@ body {
     font-size: 1rem;
     min-height: 100vh; /* Minimum height set to viewport height */
     position: relative; /* Relative positioning for footer alignment */
+    font-family: 'YourCustomFont', Arial, sans-serif;
 }
 
 a {
@@ -58,9 +59,7 @@ Wrapper class for setting a maximum content width and centering content.
     margin-bottom: 30px; /* Space below page title */
 }
 
-/*-------------------------------------------
-Header
--------------------------------------------*/
+/*Header*/
 #header {
     width: 100%; /* Full width */
     max-width: clamp(800px, 80vw, 1360px); /* Responsive max width */
@@ -91,17 +90,7 @@ Header
     opacity: 0.7; /* Fade effect on hover */
 }
 
-nav ul {
-    display: flex; /* Flexbox layout for navigation */
-    justify-content: space-around; /* Space items evenly */
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Reset padding */
-    margin: 0; /* Reset margin */
-}
-
-/*-------------------------------------------
-Top, Products
--------------------------------------------*/
+/*Top, Products*/
 #top {
     padding-top: 80px; /* Top padding for the top section */
     padding-bottom: 160px; /* Bottom padding for the top section */
@@ -131,9 +120,7 @@ Vertical align images to the top and remove gaps below images.
 }
 
 
-/*-------------------------------------------
-About
--------------------------------------------*/
+/*About*/
 #about {
     max-width: 600px; /* Maximum width for the about section */
 }
@@ -143,9 +130,7 @@ About
     margin-bottom: 10px; /* Space below paragraphs */
 }
 
-/*-------------------------------------------
-Footer
--------------------------------------------*/
+/*Footer*/
 
 #footer {
     display: flex; /* Flexbox layout for footer */
@@ -170,22 +155,13 @@ Footer
 }
 
 
+
 @media screen and (max-width: 1024px) {
     #header {
         padding: 0 20px; /* Reduce padding for mobile screens */
     }
 
-    /*-------------------------------------------
-    Top, Products
-    -------------------------------------------*/
-    .product-list {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on mobile */
-        gap: 40px 20px; /* Responsive gap size for mobile */
-    }
-
-    /*-------------------------------------------
-    Item
-    -------------------------------------------*/
+    /*Item*/
     #item {
         flex-direction: column; /* Stack items vertically */
     }
@@ -198,12 +174,16 @@ Footer
         width: 100%; /* Full width for item images */
         margin-bottom: 30px; /* Space below images */
     }
+
+    /*Products*/
+    .product-list {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on mobile */
+        gap: 40px 20px; /* Responsive gap size for mobile */
+    }
 }
 
-@media (max-width: 768px) {
-     /*-------------------------------------------
-    header
-    -------------------------------------------*/
+@media (max-width: 768px) { 
+     /*Header*/
     #header {
         flex-direction: column; /* Stack header items vertically */
     }
@@ -216,10 +196,7 @@ Footer
         margin: 10px 0; /* Space between navigation items */
     }
 
-
-    /*-------------------------------------------
-    Footer
-    -------------------------------------------*/
+    /*Footer*/
     #footer {
         flex-direction: column; /* Stack footer items vertically */
         align-items: center; /* Center footer items */
@@ -228,7 +205,6 @@ Footer
 
     #footer .menu {
         margin-bottom: 10px; /* Space below footer menu */
-        display: flex; /* Flexbox for footer menu */
         flex-direction: column; /* Stack menu items vertically */
         align-items: center; /* Center footer menu items */
         padding: 0; /* Reset padding */
@@ -238,4 +214,5 @@ Footer
         margin-bottom: 10px; /* Space between footer menu items */
     }
 }
+
 
